@@ -1,0 +1,1 @@
+/home/luclu7/.config/fisherman/z/conf.d/z.fish

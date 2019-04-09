@@ -1,0 +1,1 @@
+/home/luclu7/.config/fisherman/nvm/__nvm_run.fish

@@ -1,0 +1,1 @@
+/home/luclu7/.local/share/omf/themes/gentoo/fish_prompt.fish

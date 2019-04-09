@@ -1,0 +1,1 @@
+/home/luclu7/.config/fisherman/bass/functions/__bass.py
