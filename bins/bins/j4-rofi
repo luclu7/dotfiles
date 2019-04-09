@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#fish -c "j4-dmenu-desktop --dmenu='rofi -i -dmenu -font \"snap 12\" -bg \"#222222\" -fg \"#888888\" -hlbg \"#285577\" -hlfg \"#ffffff\" -opacity 90 -m 0 -location 2'"
+fish -c "j4-dmenu-desktop --dmenu='rofi -i -dmenu -theme solarized -font \"hack 10\"  -bg \"#222222\" -fg \"#888888\" -hlbg \"#285577\" -hlfg \"#ffffff\" -opacity 90 -m 0 -location 2'"

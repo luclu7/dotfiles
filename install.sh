@@ -7,4 +7,4 @@ else
 	exit
 fi
 
-stow -v vim i3 termite fish
+stow -v vim i3 termite fish bins

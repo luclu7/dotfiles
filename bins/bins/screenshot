@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+file=$(date +"%Y-%m-%d_%H-%M-%S")
+filewithext=$file.png
+echo $filewithext
+gnome-screenshot -a -f /home/luclu7/Images/$filewithext
+xclip -selection clipboard -t image/png -i /home/luclu7/Images/$filewithext
