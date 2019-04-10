@@ -65,6 +65,7 @@ map <F8> :w <CR> :!gcc % -o %<; ./%< <CR>
 map <F9> :w && :make <CR>
 map <F5> :syntax on <CR>
 map <F6> :syntax off <CR>
+map <F7> :%!python -m json.tool <CR>
 map <F10> :setlocal spell spelllang=fr <CR>
 map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
