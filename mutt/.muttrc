@@ -1,0 +1,48 @@
+set realname = "Luclu7"
+set header_cache =~/.mutt/cache/headers
+set certificate_file =~/.mutt/certificates
+set message_cachedir =~/.mutt/cache/bodies
+
+# configuration imap
+set spoolfile=imaps://pro1.mail.ovh.net:993/INBOX
+set imap_user = "luclu7@luclu7.fr"
+set imap_pass = `secret-tool lookup user luclu7 domain luclu7.fr`
+set imap_passive="no"
+set imap_check_subscribed="yes"
+set imap_list_subscribed="yes"
+
+# configuration SMTP
+set smtp_url = "smtp://luclu7@luclu7.fr@pro1.mail.ovh.net:587/"
+set smtp_pass = `secret-tool lookup user luclu7 domain luclu7.fr`
+set from = "me@luclu7.fr"
+set use_envelope_from=yes # Pour que postfix ou sendmail ne change pas votre from
+
+# petit plus
+set trash = "imaps://pro1.mail.ovh/Trash"
+set postponed="/Draft"
+set folder = "imaps://pro1.mail.ovh.net:993/"
+set imap_check_subscribed
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+
+# Format de date
+set date_format="%A %d %b %Y à %H:%M:%S (%Z)"
+
+# phrase d'intro pour réponse quotée
+set attribution="Le %d, %n a écrit :"
+set forward_format="[Fwd: %s]"
+set forward_quote
+
+#
+mailboxes !
+
+set editor="vim"
+
+color attachment magenta default            # attachments
+color body brightred default "(ftp|http)://[^ ]+"       # point out URLs
+color body brightcyan default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
+color error brightwhite red                 # error messages
+
+set pager_index_lines=7
+set pager_stop
