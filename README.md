@@ -1,4 +1,9 @@
 # Dotfiles
+<h1 align="center"><br>
+<img src="dotfiles.png" alt="random dotfiles icon" width="300em">
+<br><br>
+</h1>
+
 Those are ~all my dotfiles, install them if you want via GNU Stow:
 ```
 git clone https://github.com/luclu7/dotfiles ~/dotfiles
