@@ -1,6 +1,6 @@
 # Dotfiles
 <h1 align="center"><br>
-<img src="dotfiles.png" alt="random dotfiles icon" width="300em">
+<img src="https://raw.githubusercontent.com/luclu7/dotfiles/master/dotfiles.png" alt="random dotfiles icon" width="300em">
 <br><br>
 </h1>
 
