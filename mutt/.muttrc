@@ -40,9 +40,12 @@ mailboxes !
 set editor="vim"
 
 color attachment magenta default            # attachments
-color body brightred default "(ftp|http)://[^ ]+"       # point out URLs
+color body brightred default "(ftp|http|https)://[^ ]+"       # point out URLs
 color body brightcyan default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
 color error brightwhite red                 # error messages
 
 set pager_index_lines=7
 set pager_stop
+
+alternative_order text/plain text/html
+auto_view text/html
