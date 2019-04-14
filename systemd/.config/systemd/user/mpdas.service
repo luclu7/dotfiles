@@ -1,0 +1,11 @@
+[Unit]
+Description=MPD scrobbler to Last.fm
+After=mpd.service
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/mpdas
+
+[Install]
+WantedBy=default.target

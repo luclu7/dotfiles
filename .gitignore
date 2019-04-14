@@ -1,3 +1,4 @@
 vim/.vim/bundle/*
 fish/.local/share/omf/themes/*
 fish/.local/share/omf/omf/.git*
+systemd/.config/systemd/user/default.target.wants/*

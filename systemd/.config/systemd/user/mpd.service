@@ -1,0 +1,11 @@
+[Unit]
+Description=Music player daemon (mpd)
+After=pulseaudio.service
+
+[Service]
+Type=forking
+
+ExecStart=/usr/bin/mpd
+
+[Install]
+WantedBy=default.target
