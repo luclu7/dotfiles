@@ -31,7 +31,7 @@ Dependencies:
 * redshift
 * gnome-keyring
 * vim
-
+* fzf
 
 Screenshot:
 ![screenshot](screenshot.png)
