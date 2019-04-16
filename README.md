@@ -15,5 +15,21 @@ stow -v bins
 stow -v fish
 ```
 
+Dependencies:
+* j4-dmenu-desktop
+* rofi
+* termite
+* udiskie
+* [xcwd](https://github.com/schischi/xcwd)
+* gnome-screenshot
+* pa-applet
+* xbacklight
+* mpd/mpc
+* python
+* redshift
+* gnome-keyring
+* vim
+
+
 Screenshot:
 ![screenshot](screenshot.png)
