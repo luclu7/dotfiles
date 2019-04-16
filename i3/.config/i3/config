@@ -184,6 +184,7 @@ exec --no-startup-id copyq
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/Git/i3-alternating-layout/alternating_layouts.py
 exec --no-startup-id udiskie
+exec --no-startup-id copyq
 
 # Background image
 exec --no-startup-id ~/.i3/wallpaper.sh
@@ -210,7 +211,7 @@ bindsym XF86LaunchA exec mpc toggle
 #bindsym $mod+s exec mpc toggle
 bindsym XF86Explorer exec ~/.i3/mpd/next.sh
 bindsym XF86Search exec ~/.i3/mpd/previous.sh
-bindsym $mod+i exec /home/luclu7/.i3/nowplaying.sh
+bindsym $mod+i exec ~/.i3/nowplaying.sh
 bindsym XF86AudioStop exec mpc stop
 
 # Power management
@@ -259,7 +260,6 @@ exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulat
 
 exec export GTK_THEME=Arc-Dark
 #bindsym $mod+Shift+x exec --no-startup-id "i3lock; systemctl suspend;"
-exec --no-startup-id copyq
 
 # gaps
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
@@ -384,11 +384,11 @@ mode "$mode_gaps_left" {
 }
 
 #bindsym Print exec --no-startup-id gnome-screenshot -a -f /home/luclu7/Images/$(date +"%Y-%m-%d_%H-%M-%S").png
-bindsym Print exec --no-startup-id /home/luclu7/bins/screenshot
-bindsym $mod+Print exec --no-startup-id gnome-screenshot -w -f /home/luclu7/Images/$(date +"%Y-%m-%d_%H-%M-%S").png
-bindsym $mod+Shift+Print exec --no-startup-id gnome-screenshot -f /home/luclu7/Images/$(date +"%Y-%m-%d_%H-%M-%S").png
+bindsym Print exec --no-startup-id ~/bins/screenshot
+bindsym $mod+Print exec --no-startup-id gnome-screenshot -w -f ~/Images/$(date +"%Y-%m-%d_%H-%M-%S").png
+bindsym $mod+Shift+Print exec --no-startup-id gnome-screenshot -f ~/Images/$(date +"%Y-%m-%d_%H-%M-%S").png
 
-exec --no-startup-id /home/luclu7/bins/setup-time-login.sh
+exec --no-startup-id ~/bins/setup-time-login.sh
 exec --no-startup-id xmodmap -e "keycode 105 = Menu"
 bindsym XF86Calculator exec --no-startup-id fish -c "qalculate-gtk"
 bindsym XF86HomePage exec --no-startup-id fish -c "chromium"
