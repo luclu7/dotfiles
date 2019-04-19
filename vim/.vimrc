@@ -25,6 +25,8 @@ Plugin 'reedes/vim-lexical' " Better spellcheck mappings
 Plugin 'reedes/vim-litecorrect' " Better autocorrections
 Plugin 'reedes/vim-textobj-sentence' " Treat sentences as text objects
 Plugin 'reedes/vim-wordy' " Weasel words and passive voice
+Plugin 'ying17zi/vim-live-latex-preview'
+
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
 Plugin 'ntk148v/vim-horizon'
@@ -33,7 +35,6 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'fatih/vim-go'
-
 
   augroup pencil
    autocmd!
