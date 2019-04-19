@@ -2,13 +2,11 @@
 #
 # tek - Upload text to teknik.io.
 
-file=${1:-$(< ~/.cache/scrot)}
-
-[[ -f $file ]] ||
+[[ -f $1 ]] ||
     exit 1
 
 : https://api.teknik.io/v1/Paste
-: "$(curl -s --data-urlencode "code=$(< "$file")" "$_")"
+: "$(curl -s --data-urlencode "code=$(< "$1")" "$_")"
 : "${_/*url\":}"
 : "${_/,*}"
 
