@@ -5,7 +5,7 @@ After=pulseaudio.service
 [Service]
 Type=forking
 
-ExecStart=/usr/bin/mpd
+ExecStart=/usr/bin/mpd %h/.config/mpd/mpd.conf
 
 [Install]
 WantedBy=default.target
