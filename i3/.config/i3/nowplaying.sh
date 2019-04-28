@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-notify-send "Now playing: $(mpc current)"
+notify-send -i audio-headset "Now playing: $(mpc current)"
