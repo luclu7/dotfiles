@@ -5,4 +5,4 @@ then
 	current="nothing"
 fi
 
-notify-send -i audio-headset "Now playing: $current"
+notify-send -i audio-headphones "Now playing: $current"
