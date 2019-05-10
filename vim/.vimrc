@@ -123,3 +123,4 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 :set nospell
+:set number
