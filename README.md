@@ -14,7 +14,7 @@ stow -v termite
 stow -v bins
 stow -v fish
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim :PluginInstall
+vim +:PluginInstall
 ```
 
 Dependencies:
