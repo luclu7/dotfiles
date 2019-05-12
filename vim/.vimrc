@@ -33,7 +33,6 @@ Plugin 'ntk148v/vim-horizon'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'fatih/vim-go'
 
   augroup pencil
