@@ -203,8 +203,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle  # 
 bindsym XF86Tools exec termite -e "vim /home/luclu7/.i3/config"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10 # decrease screen brightness
 
 # Media player controls
 bindsym XF86LaunchA exec mpc toggle

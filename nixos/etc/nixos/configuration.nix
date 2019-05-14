@@ -66,6 +66,8 @@
 	pa_applet
 	sqlite
 	unzip
+	bc
+	qalculate-gtk
 	unrar
 	gnumake
 	xsel
@@ -80,7 +82,21 @@
 	python
 	gnupg
 	lm_sensors
+
+	# mpd
+	mpd
+	mpc_cli
+	gmpc	
+
+	cifs-utils
+	samba
+
+	libnotify
+	acpilight
+	tlp
+	paper-icon-theme
 	gnome3.gnome-screenshot
+	gnome3.gnome-keyring
 	];
 
 	fonts = {
@@ -116,6 +132,8 @@
 
 	programs.fish.enable = true;
 
+	hardware.brightnessctl.enable = true;
+
 	nixpkgs.config.dwm.patches =	[
 		/home/luclu7/patches/dwm/test.diff
 	];
@@ -139,7 +157,7 @@
 	# networking.firewall.enable = false;
 
 	# Enable CUPS to print documents.
-	# services.printing.enable = true;
+	services.printing.enable = true;
 
 	# Enable sound.
 	sound.enable = true;
@@ -148,7 +166,7 @@
 		# Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.luclu7 = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+		extraGroups = [ "wheel" "video" "networkmanager" ]; # Enable ‘sudo’ for the user.
 	};
 
 	# This value determines the NixOS release with which your system is to be
@@ -196,11 +214,31 @@
 };
 
  services.upower.enable = true;
-	
+
+
+	services.mpd = {
+		enable = true;
+		musicDirectory = "/home/luclu7/Musique";
+		user = "root";
+		group = "root";
+		extraConfig = ''
+				audio_output {
+					type		"pulse"
+					name		"MPD"
+					server	"127.0.0.1"
+				}
+			'';
+	};
+
+
 	services.redshift = {
 		enable = true;
 		latitude = "48.8534";
 		longitude = "2.3488";
+		temperature = {
+			day = 3100;
+			night = 2400;
+		};
 	};
 		users.extraUsers.luclu7 = {
 			shell = pkgs.fish;

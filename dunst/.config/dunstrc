@@ -28,7 +28,7 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 32
-    icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/16x16/apps/:/usr/share/icons/gnome/16x16/devices
+    icon_path = /nix/store/js7j8mv9np06kxj0y8m300q4d3ka4ss3-adwaita-icon-theme-3.30.1/share/icons/Adwaita/16x16/status/:/nix/store/js7j8mv9np06kxj0y8m300q4d3ka4ss3-adwaita-icon-theme-3.30.1/share/icons/Adwaita/16x16/devices/:/nix/store/js7j8mv9np06kxj0y8m300q4d3ka4ss3-adwaita-icon-theme-3.30.1/share/icons/Adwaita/16x16/apps/:/nix/store/js7j8mv9np06kxj0y8m300q4d3ka4ss3-adwaita-icon-theme-3.30.1/share/icons/Adwaita/16x16/devices
     sticky_history = yes
     history_length = 20
     always_run_script = true
@@ -61,4 +61,4 @@
     foreground = "#f0e0e0"
     frame_color = "#d64e4e"
     timeout = 0
-    icon = /usr/share/icons/Paper/16x16/status/dialog-warning.png
+    icon = /nix/store/zqh2f1gmkd9ag1fp6mwl324nsk2q3ix0-paper-icon-theme-2018-06-24/share/icons/Paper/16x16/status/dialog-warning.png
