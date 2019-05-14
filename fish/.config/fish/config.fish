@@ -5,6 +5,8 @@ set -x EDITOR vim
 alias docker="sudo docker"
 set -e VTE_VERSION
 
+set -gx PATH $PATH /home/luclu7/bins
+
 # abbreviations
 abbr l 'ls -lash'
 abbr i 'sxiv'

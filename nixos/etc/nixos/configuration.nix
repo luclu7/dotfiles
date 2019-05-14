@@ -94,6 +94,7 @@
 	libnotify
 	acpilight
 	tlp
+	knot-dns
 	paper-icon-theme
 	gnome3.gnome-screenshot
 	gnome3.gnome-keyring
