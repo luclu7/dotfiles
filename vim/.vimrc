@@ -34,6 +34,7 @@ Plugin 'ntk148v/vim-horizon'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'fatih/vim-go'
+Plugin 'wakatime/vim-wakatime'
 
   augroup pencil
    autocmd!

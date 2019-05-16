@@ -6,6 +6,7 @@ alias docker="sudo docker"
 set -e VTE_VERSION
 
 set -gx PATH $PATH /home/luclu7/bins
+set -x GOPATH /home/luclu7/go
 
 # abbreviations
 abbr l 'ls -lash'
