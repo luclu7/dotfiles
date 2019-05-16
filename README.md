@@ -17,6 +17,10 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +:PluginInstall
 ```
 
+There's two branches for my main laptop (W541) and my secondary laptop (X240):
+* master
+* x240
+
 Dependencies:
 * j4-dmenu-desktop
 * rofi
