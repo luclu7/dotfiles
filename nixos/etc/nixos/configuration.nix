@@ -44,6 +44,7 @@
 	vim
 	htop
 	firefox
+	thunderbird
 	chromium
 	networkmanagerapplet
 	git
@@ -78,6 +79,7 @@
 	libreoffice-fresh
 	nload
 	inxi
+	arandr
 	psmisc
 	python
 	gnupg
@@ -95,7 +97,11 @@
 	acpilight
 	tlp
 	dia
+	neovim
+	binutils-unwrapped
 	dhcpcd
+	calibre
+	hunspellDicts.fr-any
 	newsboat
 	knot-dns
 	paper-icon-theme
