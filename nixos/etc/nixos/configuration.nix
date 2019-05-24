@@ -65,6 +65,7 @@
 	python36Full
 	pa_applet
 	xclip
+	xfceUnstable.ristretto
 	udiskie
 	pa_applet
 	sqlite
@@ -77,9 +78,15 @@
 	feh
 	polybar
 	sxiv
+	imagemagick
 	rsync
 	libreoffice-fresh
 	nload
+
+	texlive.combined.scheme-basic
+	texmaker
+	pandoc
+
 	inxi
 	arandr
 	psmisc
@@ -118,6 +125,7 @@
 			anonymousPro
 			noto-fonts-emoji
 			corefonts
+			vistafonts
 			dejavu_fonts
 			noto-fonts
 			freefont_ttf
