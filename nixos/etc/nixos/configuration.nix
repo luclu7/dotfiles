@@ -59,8 +59,10 @@
 	tdesktop redshift
 	xorg.xbacklight
 	xorg.xev
+	xorg.xkill
 	xorg.xdpyinfo
 	glxinfo
+	python36Full
 	pa_applet
 	xclip
 	udiskie
