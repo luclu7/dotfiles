@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo nix build --no-link -f '<nixpkgs/nixos>' config.system.build.toplevel
+sudo nixos-rebuild switch
