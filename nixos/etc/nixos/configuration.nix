@@ -106,6 +106,8 @@
 	acpilight
 	tlp
 	dia
+	exa
+	discord
 	neovim
 	binutils-unwrapped
 	dhcpcd
