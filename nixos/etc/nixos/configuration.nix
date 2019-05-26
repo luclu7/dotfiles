@@ -111,13 +111,18 @@
 	phpPackages.composer
 
 	exa
+	jq
 	discord
 	neovim
 	binutils-unwrapped
 	dhcpcd
+	wineWowPackages.minimal
 	calibre
 	hunspellDicts.fr-any
 	newsboat
+	remotebox
+	virtualbox
+	linuxPackages.virtualbox
 	knot-dns
 	paper-icon-theme
 	gnome3.gnome-screenshot
@@ -207,6 +212,13 @@
 	system.stateVersion = "19.03"; # Did you read the comment?
 
 	# Customs stuff
+
+	networking.extraHosts =
+	''
+		127.0.0.1 www.sublimetext.com
+		127.0.0.1 license.sublimehq.com
+	'';
+
 
 	services.xserver = {
 	enable = true;
