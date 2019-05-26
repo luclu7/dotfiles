@@ -121,8 +121,6 @@
 	hunspellDicts.fr-any
 	newsboat
 	remotebox
-	virtualbox
-	linuxPackages.virtualbox
 	knot-dns
 	paper-icon-theme
 	gnome3.gnome-screenshot
@@ -152,6 +150,8 @@
 		];
 	};
 
+	virtualisation.libvirtd.enable = true; 
+	
 	systemd.user.services."dunst" = {
 		enable = true;
 		description = "";
