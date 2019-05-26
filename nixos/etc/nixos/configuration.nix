@@ -106,6 +106,10 @@
 	acpilight
 	tlp
 	dia
+
+	php
+	phpPackages.composer
+
 	exa
 	discord
 	neovim
