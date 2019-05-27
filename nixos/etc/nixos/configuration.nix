@@ -61,6 +61,8 @@
 	xorg.xev
 	xorg.xkill
 	xorg.xdpyinfo
+	xorg.xmodmap
+	lynx
 	glxinfo
 	python36Full
 	pa_applet
