@@ -91,6 +91,7 @@
 
 	inxi
 	arandr
+	openssl
 	psmisc
 	python
 	gnupg
@@ -122,6 +123,7 @@
 	calibre
 	hunspellDicts.fr-any
 	newsboat
+	kicad
 	remotebox
 	knot-dns
 	paper-icon-theme
@@ -188,6 +190,10 @@
 	programs.ssh = {
 		startAgent = true;
 	};
+
+	security.pki.certificateFiles = [
+		"${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+	];
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
 	# networking.firewall.allowedUDPPorts = [ ... ];
@@ -219,6 +225,7 @@
 	''
 		127.0.0.1 www.sublimetext.com
 		127.0.0.1 license.sublimehq.com
+		10.10.0.1 pfsense.lan
 	'';
 
 
