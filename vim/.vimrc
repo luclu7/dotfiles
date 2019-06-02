@@ -27,7 +27,7 @@ Plugin 'reedes/vim-textobj-sentence' " Treat sentences as text objects
 Plugin 'reedes/vim-wordy' " Weasel words and passive voice
 Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'dag/vim-fish' " fish shell syntax highlighting
-
+Plugin 'posva/vim-vue' " vue.js
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
 Plugin 'ntk148v/vim-horizon'

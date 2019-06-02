@@ -125,6 +125,7 @@
 	newsboat
 	kicad
 	remotebox
+	linuxPackages.tp_smapi
 	knot-dns
 	paper-icon-theme
 	gnome3.gnome-screenshot
