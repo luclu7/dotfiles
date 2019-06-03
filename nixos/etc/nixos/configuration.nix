@@ -116,6 +116,7 @@
 	exa
 	jq
 	discord
+	iperf
 	neovim
 	binutils-unwrapped
 	dhcpcd
