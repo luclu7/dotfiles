@@ -211,7 +211,7 @@ bindsym XF86LaunchA exec mpc toggle
 #bindsym $mod+s exec mpc toggle
 bindsym XF86Explorer exec ~/.i3/mpd/next.sh
 bindsym XF86Search exec ~/.i3/mpd/previous.sh
-bindsym $mod+i exec ~/.i3/nowplaying.sh
+bindsym $mod+i exec ~/bins/mpdstatus
 bindsym XF86AudioStop exec mpc stop
 
 # Power management
