@@ -62,6 +62,7 @@
 	xorg.xkill
 	xorg.xdpyinfo
 	xorg.xmodmap
+	xorg.xmessage
 	lynx
 	glxinfo
 	python36Full
@@ -192,6 +193,8 @@
 	programs.ssh = {
 		startAgent = true;
 	};
+
+	services.aria2.enable = true;
 
 	security.pki.certificateFiles = [
 		"${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
