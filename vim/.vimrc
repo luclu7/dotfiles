@@ -27,10 +27,12 @@ Plugin 'reedes/vim-textobj-sentence' " Treat sentences as text objects
 Plugin 'reedes/vim-wordy' " Weasel words and passive voice
 Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
 Plugin 'ntk148v/vim-horizon'
+"Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -132,4 +134,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <C-n> :NERDTreeToggle<CR>
-
+let g:airline_powerline_fonts = 1
+set ruler
+set t_Co=256
