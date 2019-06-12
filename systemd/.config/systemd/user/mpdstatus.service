@@ -1,0 +1,10 @@
+[Unit]
+Description=MPD status daemon
+
+[Service]
+Type=simple
+
+ExecStart=/home/luclu7/bins/mpdstatus-daemon
+
+[Install]
+WantedBy=default.target
