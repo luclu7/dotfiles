@@ -26,6 +26,7 @@ Plugin 'reedes/vim-litecorrect' " Better autocorrections
 Plugin 'reedes/vim-textobj-sentence' " Treat sentences as text objects
 Plugin 'reedes/vim-wordy' " Weasel words and passive voice
 Plugin 'ying17zi/vim-live-latex-preview'
+Plugin 'majutsushi/tagbar'
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
@@ -62,7 +63,8 @@ filetype plugin indent on    " Nécessaire
 " binds
 " map &lt;F8&gt; :w &lt;CR&gt;  :!clear && gcc %  &lt;CR&gt; 
 " map F9 :w && :!gcc -o % && !./%
-map <F8> :w <CR> :!gcc % -o %<; ./%< <CR>
+map <C-F8> :w <CR> :!gcc % -o %<; ./%< <CR>
+nmap <F8> :TagbarToggle<CR>
 map <F9> :w && :make <CR>
 map <F5> :syntax on <CR>
 map <F6> :syntax off <CR>
@@ -124,3 +126,10 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 :set nospell
 :set number
+
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-n> :NERDTreeToggle<CR>
+

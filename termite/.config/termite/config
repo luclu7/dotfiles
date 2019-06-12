@@ -1,5 +1,6 @@
 [options]
 font = Droid Sans Mono 9
+# font = xos4 Terminess Powerline 10
 
 [colors]
 
