@@ -1,0 +1,74 @@
+theme = "modern"
+icons = "awesome"
+
+[[block]]
+block = "net"
+device = "wlp3s0"
+ssid = true
+ip = true
+speed_down = true
+speed_up = false
+interval = 5
+
+[[block]]
+block = "custom"
+command = "printf"
+interval = 100
+
+[separator]
+
+[[block]]
+block = "music"
+player = "mpd"
+marquee_speed = 1
+buttons = ["prev", "play", "next"]
+
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GiB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "disk_space"
+path = "/home"
+alias = "~"
+info_type = "available"
+unit = "GiB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage}% {time}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "cpu"
+interval = 5
+
+[[block]]
+block = "load"
+interval = 5
+format = "{1m}"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 1
+# format = "%a %di%m %R"
+format = "📅 %d-%m-%Y ⏰%H:%M:%S"

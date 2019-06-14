@@ -165,7 +165,8 @@ bar {
     # i3bar position
     position top
     # Using custom i3status.conf
-    status_command i3status -c ~/.i3/i3status.conf
+    # status_command i3status -c ~/.i3/i3status.conf
+    status_command i3status-rs ~/.config/i3/i3status-rs.toml
     # status_command i3blocks
     # status_command polybar -r top
     # polybar -r top -c Git/dotfiles-phineas0fog/.config/polybar/config2
