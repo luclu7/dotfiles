@@ -75,6 +75,7 @@ map <F10> :setlocal spell spelllang=fr <CR>
 map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
 map <C-i> :History <CR>
+map <C-K>  :GoRun <CR>
 
 syntax on
 if has("autocmd")
