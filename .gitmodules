@@ -1,0 +1,3 @@
+[submodule "bins/bins/i3scripts"]
+	path = bins/bins/i3scripts
+	url = https://github.com/justbuchanan/i3scripts

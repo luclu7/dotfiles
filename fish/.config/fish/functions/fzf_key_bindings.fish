@@ -1,0 +1,1 @@
+/home/luclu7/.cache/dein/repos/github.com/junegunn/fzf/shell/key-bindings.fish

@@ -166,11 +166,11 @@ bar {
     position top
     # Using custom i3status.conf
     # status_command i3status -c ~/.i3/i3status.conf
-    status_command i3status-rs ~/.config/i3/i3status-rs.toml
+    # status_command i3status-rs ~/.config/i3/i3status-rs.toml
     # status_command i3blocks
-    # status_command polybar -r top
+    # status_command polybar top
     # polybar -r top -c Git/dotfiles-phineas0fog/.config/polybar/config2
-    #  status_command bash ~/.i3/polybar.sh
+    status_command bash ~/.i3/polybar.sh
 }
 
 # Start background processes.
@@ -259,6 +259,8 @@ exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulat
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+exec --no-startup-id ~/bins/i3scripts/autoname_workspaces.py &
+
 
 exec export GTK_THEME=Arc-Dark
 #bindsym $mod+Shift+x exec --no-startup-id "i3lock; systemctl suspend;"
