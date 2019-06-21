@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #002b36
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -28,25 +28,24 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 25
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 2
@@ -65,8 +64,8 @@ tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
+;wm-restack = bspiwm
+wm-restack = i3
 
 ;override-redirect = true
 
@@ -264,7 +263,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date = " %Y-%m-%d"
 date-alt = " %Y-%m-%d"
@@ -337,9 +336,9 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 99
+full-at = 97
 label = "Battery"
-time-format = %H:%M
+time-format = %Hh%M
 
 ; Available tags:
 ;   <label-charging> (default)
@@ -366,14 +365,14 @@ format-discharging = <ramp-capacity> <label-discharging>
 ;   %percentage_raw% (unreleased)
 ;   %time%
 ;   %consumption% (shows current charge rate in watts)
-label-charging = Charging %percentage%%
+label-charging = Charging %percentage_raw%% %consumption%W
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw% (unreleased)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = Discharging %percentage%%
+label-discharging = Discharging %percentage_raw%% %consumption%W %time%
 
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
