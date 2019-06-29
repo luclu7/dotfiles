@@ -14,3 +14,5 @@ abbr d 'sudo docker'
 abbr nss 'systemctl'
 abbr s 'sudo systemctl'
 abbr ca 'curl -vvI -k'
+
+alias soda="buffalo pop"
