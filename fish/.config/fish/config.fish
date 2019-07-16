@@ -15,4 +15,7 @@ abbr nss 'systemctl'
 abbr s 'sudo systemctl'
 abbr ca 'curl -vvI -k'
 
+# nix
+eval (~/bins/nix.sh) 2>/dev/null
+
 alias soda="buffalo pop"
