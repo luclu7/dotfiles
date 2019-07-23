@@ -13,6 +13,7 @@
 	# Use the GRUB 2 boot loader.
 	boot.loader.grub.enable = true;
 	boot.loader.grub.version = 2;
+	boot.kernelPackages = pkgs.linuxPackages_latest;	
 	# boot.loader.grub.efiSupport = true;
 	# boot.loader.grub.efiInstallAsRemovable = true;
 	# boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -67,6 +68,7 @@
 	glxinfo
 	python36Full
 	pa_applet
+	
 	xclip
 	xfceUnstable.ristretto
 	udiskie
@@ -187,7 +189,7 @@
 
 	# Enable the OpenSSH daemon.
 	services.openssh = {
-		enable = true;
+		enable = false;
 	};
 	
 	programs.ssh = {
@@ -233,6 +235,12 @@
 		10.10.0.1 pfsense.lan
 	'';
 
+
+
+
+
+
+	programs.mtr.enable = true;
 
 	services.xserver = {
 	enable = true;

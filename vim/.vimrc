@@ -28,14 +28,18 @@ Plugin 'reedes/vim-wordy' " Weasel words and passive voice
 Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'dag/vim-fish' " fish shell syntax highlighting
 Plugin 'posva/vim-vue' " vue.js
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
+
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
 Plugin 'ntk148v/vim-horizon'
+"Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-Plugin 'fatih/vim-go'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'fatih/vim-go'
 
   augroup pencil
    autocmd!
@@ -63,7 +67,8 @@ filetype plugin indent on    " Nécessaire
 " binds
 " map &lt;F8&gt; :w &lt;CR&gt;  :!clear && gcc %  &lt;CR&gt; 
 " map F9 :w && :!gcc -o % && !./%
-map <F8> :w <CR> :!gcc % -o %<; ./%< <CR>
+map <C-F8> :w <CR> :!gcc % -o %<; ./%< <CR>
+nmap <F8> :TagbarToggle<CR>
 map <F9> :w && :make <CR>
 map <F5> :syntax on <CR>
 map <F6> :syntax off <CR>
@@ -72,6 +77,7 @@ map <F10> :setlocal spell spelllang=fr <CR>
 map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
 map <C-i> :History <CR>
+map <C-K>  :GoRun <CR>
 
 syntax on
 if has("autocmd")
@@ -125,3 +131,12 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 :set nospell
 :set number
+
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-n> :NERDTreeToggle<CR>
+let g:airline_powerline_fonts = 1
+set ruler
+set t_Co=256
