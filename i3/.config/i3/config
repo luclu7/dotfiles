@@ -15,10 +15,11 @@ set $mod2 Super_R
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text renering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:Droid Sans Mono 8
-font pango:xos4 Terminess Powerline 8
+font pango:Droid Sans Mono 8
+#font pango:Cantarell Regular 8
+#font pango:xos4 Terminess Powerline 8
 # Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
@@ -84,10 +85,14 @@ bindsym $mod+Shift+space floating toggle
 #bindsym $mod+Shift+s sticky toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
+
+# switch to next/prev workspace
+bindsym $mod+Shift+p workspace next
+bindsym $mod+Shift+o workspace prev
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -205,8 +210,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle  # 
 bindsym XF86Tools exec termite -e "vim /home/luclu7/.i3/config"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10 # decrease screen brightness
 
 # Media player controls
 bindsym XF86LaunchA exec mpc toggle

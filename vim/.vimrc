@@ -28,6 +28,9 @@ Plugin 'reedes/vim-wordy' " Weasel words and passive voice
 Plugin 'ying17zi/vim-live-latex-preview'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
+Plugin 'stevearc/vim-arduino'
+Plugin 'cespare/vim-toml'
+Plugin 'StanAngeloff/php.vim'
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
