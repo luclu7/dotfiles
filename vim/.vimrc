@@ -31,6 +31,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'stevearc/vim-arduino'
 Plugin 'cespare/vim-toml'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'vim-pandoc/vim-pandoc'
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
@@ -80,9 +81,16 @@ map <F10> :setlocal spell spelllang=fr <CR>
 map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
 map <C-i> :History <CR>
+
+" automap of C-K
 let extension = expand('%:e')
+:set ignorecase
 if extension == "go"
 	map <C-K>  :GoRun <CR>
+elseif extension == "md"
+	map <C-K> :Pandoc
+else
+	map <C-K> :make
 endif
 
 
