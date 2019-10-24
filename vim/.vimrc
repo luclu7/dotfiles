@@ -42,6 +42,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'fatih/vim-go'
 
+Plugin 'neoclide/coc.nvim'
+
   augroup pencil
    autocmd!
 "   autocmd filetype markdown,mkd call pencil#init()
@@ -78,7 +80,11 @@ map <F10> :setlocal spell spelllang=fr <CR>
 map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
 map <C-i> :History <CR>
-map <C-K>  :GoRun <CR>
+let extension = expand('%:e')
+if extension == "go"
+	map <C-K>  :GoRun <CR>
+endif
+
 
 syntax on
 if has("autocmd")
@@ -91,6 +97,17 @@ execute pathogen#infect()
 " :setlocal spell spelllang=fr
 colorscheme blackboard
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " fzf
 " This is the default extra key bindings
@@ -133,6 +150,15 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 :set nospell
 :set number
 
+if executable('ccls')
+   au User lsp_setup call lsp#register_server({
+      \ 'name': 'ccls',
+      \ 'cmd': {server_info->['ccls']},
+      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'initialization_options': {'cache': {'directory': '/tmp/ccls/cache' }},
+      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+      \ })
+endif
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -141,3 +167,4 @@ map <C-n> :NERDTreeToggle<CR>
 let g:airline_powerline_fonts = 1
 set ruler
 set t_Co=256
+set undodir=~/.vim/undodir

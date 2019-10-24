@@ -144,7 +144,12 @@ mode "resize" {
         bindsym Up resize shrink height 2 px or 2 ppt
         bindsym Right resize grow width 2 px or 2 ppt
 
-        # back to normal: Enter or Escape
+        bindsym Shift+Left resize shrink width 5 px or 5 ppt
+        bindsym Shift+Down resize grow height 5 px or 5 ppt
+        bindsym Shift+Up resize shrink height 5 px or 5 ppt
+	bindsym Shift+Right resize grow width 5 px or 5 ppt
+        
+	# back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -170,12 +175,12 @@ bar {
     # i3bar position
     position top
     # Using custom i3status.conf
-    # status_command i3status -c ~/.i3/i3status.conf
+    status_command i3status -c ~/.i3/i3status.conf
     # status_command i3status-rs ~/.config/i3/i3status-rs.toml
     # status_command i3blocks
     # status_command polybar top
     # polybar -r top -c Git/dotfiles-phineas0fog/.config/polybar/config2
-    status_command bash ~/.i3/polybar.sh
+    # status_command bash ~/.i3/polybar.sh
 }
 
 # Start background processes.
@@ -210,8 +215,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle  # 
 bindsym XF86Tools exec termite -e "vim /home/luclu7/.i3/config"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Media player controls
 bindsym XF86LaunchA exec mpc toggle
