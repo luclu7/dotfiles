@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-primusrun /usr/bin/java $@
+optirun /usr/bin/java $@

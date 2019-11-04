@@ -32,6 +32,7 @@ Plugin 'stevearc/vim-arduino'
 Plugin 'cespare/vim-toml'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'tpope/vim-surround'
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
@@ -88,9 +89,9 @@ let extension = expand('%:e')
 if extension == "go"
 	map <C-K>  :GoRun <CR>
 elseif extension == "md"
-	map <C-K> :Pandoc
+	map <C-K> :Pandoc <CR>
 else
-	map <C-K> :make
+	map <C-K> :make <CR>
 endif
 
 
