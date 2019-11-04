@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+	if [[ $1 == "on" ]]; then
+		echo "Powering on the dGPU..."
+		sudo bash -c "echo '\_SB_.PCI0.PEG0.PEGP._ON' > /proc/acpi/call"
+	elif [[ $1 == "off" ]]; then
+		echo "Shutting down the dGPU..."
+		sudo bash -c "echo '\_SB_.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call"
+	
+	else
+		echo "Please use this script with on or off."
+	fi
