@@ -22,3 +22,6 @@ alias b="buffalo"
 eval (~/bins/nix.sh) 2>/dev/null
 
 alias soda="buffalo pop"
+
+# opam configuration
+source /home/luclu7/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sxiv -t /home/luclu7/.i3/backgrounds/*
