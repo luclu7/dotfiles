@@ -274,8 +274,7 @@ exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulat
 
 
 exec export GTK_THEME=Arc-Dark
-#bindsym $mod+Shift+x exec --no-startup-id "i3lock; systemctl suspend;"
-
+bindsym $mod+Shift+l exec --no-startup-id "i3lock-fancy"
 # gaps
 set $mode_gaps Gaps: (o)uter, (i)nner, (h)orizontal, (v)ertical, (t)op, (r)ight, (b)ottom, (l)eft
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
