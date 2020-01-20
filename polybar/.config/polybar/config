@@ -18,7 +18,10 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #002b36
+; ~solarized
+;background = #002b36
+; ~grey
+background = #1D1F21
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -105,7 +108,7 @@ interval = 25
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-} %percentage_used%%
+label-mounted = %{F#0a81f5}%mountpoint%%{F-} %percentage_used%% %{F#8BBDEE}%free% %{F-}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -225,7 +228,7 @@ label = RAM %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlan0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -247,7 +250,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp0s25
+interface = enp0s31f6
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -424,7 +427,7 @@ animation-discharging-foreground = ${colors.foreground-alt}
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 65
 interval = 5
 format = <ramp> <label>
 format-underline = #f50a4d
