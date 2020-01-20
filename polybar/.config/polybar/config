@@ -486,7 +486,7 @@ margin-bottom = 5
 [module/system-fan-speed]
 type = custom/script
 exec = ~/.config/polybar/system-fan-speed.sh
-interval = 10
+interval = 2
 
 
 ; vim:ft=dosini
