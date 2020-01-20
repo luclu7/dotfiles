@@ -61,7 +61,7 @@ font-3 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature system-fan-speed date powermenu
+modules-right = system-fan-speed filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -288,7 +288,7 @@ label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted-foreground = #8C8C8C
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -486,7 +486,7 @@ margin-bottom = 5
 [module/system-fan-speed]
 type = custom/script
 exec = ~/.config/polybar/system-fan-speed.sh
-interval = 2
+interval = 5
 
 
 ; vim:ft=dosini
