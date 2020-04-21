@@ -83,6 +83,7 @@ map <F12> :set nospell <CR>
 map <C-t> :Files <CR>
 map <C-i> :History <CR>
 
+
 " automap of C-K
 let extension = expand('%:e')
 :set ignorecase
@@ -90,6 +91,10 @@ if extension == "go"
 	map <C-K>  :GoRun <CR>
 elseif extension == "md"
 	map <C-K> :Pandoc <CR>
+elseif extension == "sh"
+	map <C-K> :!bash %:p<CR>
+elseif extension == "py"
+	nnoremap <buffer> <C-K> :exec '!python' shellescape(@%, 1)<cr>
 else
 	map <C-K> :make <CR>
 endif
@@ -117,6 +122,8 @@ function! s:check_back_space() abort
 endfunction
 
 inoremap <silent><expr> <c-space> coc#refresh()
+
+let g:coc_node_path = "/usr/bin/node"
 
 " fzf
 " This is the default extra key bindings
