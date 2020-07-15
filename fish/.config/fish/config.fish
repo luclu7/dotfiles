@@ -27,3 +27,5 @@ alias soda="buffalo pop"
 
 # opam configuration
 source /home/luclu7/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+fish_ssh_agent
