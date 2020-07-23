@@ -33,6 +33,8 @@ Plugin 'cespare/vim-toml'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+
 
 " themes
 Plugin 'wmvanvliet/vim-blackboard'
@@ -163,6 +165,8 @@ let g:fzf_colors =
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 "let g:go_fmt_command = "goimports"
+
+let g:user_emmet_leader_key=','
 
 :set nospell
 :set number
