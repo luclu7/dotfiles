@@ -61,7 +61,7 @@ font-3 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = system-fan-speed filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = system-fan-speed filesystem xbacklight pulseaudio xkeyboard memory cpu network-traffic wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -423,6 +423,13 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 animation-charging-foreground = ${colors.foreground-alt}
 
 animation-discharging-foreground = ${colors.foreground-alt}
+
+[module/network-traffic]
+type = custom/script
+exec = ~/polybar-scripts/polybar-scripts/network-traffic/network-traffic.sh
+tail = true
+interval = 1
+format-underline = #C90000
 
 [module/temperature]
 type = internal/temperature
