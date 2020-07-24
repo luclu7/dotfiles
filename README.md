@@ -14,6 +14,7 @@ stow -v termite
 stow -v bins
 stow -v fish
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/luclu7/polybar-scripts ~/polybar-scripts
 vim +:PluginInstall
 ```
 
@@ -26,6 +27,7 @@ Dependencies:
 * rofi
 * termite
 * udiskie
+* polybar
 * [xcwd](https://github.com/schischi/xcwd)
 * gnome-screenshot
 * pa-applet
