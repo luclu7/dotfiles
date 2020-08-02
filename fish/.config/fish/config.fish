@@ -23,6 +23,8 @@ alias b="buffalo"
 # nix
 eval (~/bins/nix.sh) 2>/dev/null
 
+thefuck --alias | source
+
 alias soda="buffalo pop"
 
 # opam configuration
